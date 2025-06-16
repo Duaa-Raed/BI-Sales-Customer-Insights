@@ -64,21 +64,22 @@ Outliers were examined and retained, as they represent significant high-value cu
 
 *Based on total spending, customers were segmented as follows:*
 
-High Roller: Customers spending more than 450,000
+- High Roller: Customers spending more than 450,000
 
-Loyal Customer: Customers spending between 150,000 and 450,000
+- Loyal Customer: Customers spending between 150,000 and 450,000
 
-Regular Customer: Customers spending less than or equal to 150,000
+- Regular Customer: Customers spending less than or equal to 150,000
 
 *The distribution of customers across segments is:*
 
-Regular Customer: 297
+- Regular Customer: 297
 
-Loyal Customer: 143
+- Loyal Customer: 143
 
-High Roller: 38
+- High Roller: 38
 
 **Summary and Next Steps**
+
 Identified the most valuable customers and categorized them into clear spending segments.
 
 Noted the presence of high-spending customers (outliers) which may warrant further behavioral analysis.
