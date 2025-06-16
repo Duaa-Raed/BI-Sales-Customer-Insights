@@ -22,8 +22,8 @@ Top 5 Best-Selling Products in Each Country.csv
 
 -------
 
-📊 1. High-Value Customers Analysis
-
+*1. High-Value Customers Analysis*
+----
 🎯 Business Questions:
 
 Who are the most valuable customers in terms of total spending?
