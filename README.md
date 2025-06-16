@@ -7,6 +7,7 @@ This project aims to analyze and visualize key sales and customer performance in
 All datasets were retrieved directly from the AdventureWorks relational database and exported as CSV files for data cleaning, feature engineering, and analysis.
 
 The project includes multiple analytical modules, each designed to answer specific business questions using cleaned and enriched data.
+
 ---
 **Extracted Datasets**
 
