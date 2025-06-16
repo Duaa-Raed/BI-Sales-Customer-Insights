@@ -26,15 +26,15 @@ Top 5 Best-Selling Products in Each Country.csv
 
 ** High-Value Customers Analysis*
 ----
-*Business Questions*
+**Business Questions**
 
-Who are the most valuable customers in terms of total spending?
+- Who are the most valuable customers in terms of total spending?
 
-Are there any unusual high spenders or inconsistent order behavior?
+- Are there any unusual high spenders or inconsistent order behavior?
 
-How can we categorize customers based on their spending?
+- How can we categorize customers based on their spending?
 
-*Summary*
+**Summary**
 
 Extracted from AdventureWorks using a SQL query that joins customer and sales order data.
 
@@ -66,21 +66,5 @@ Regular Customer (others)
 
 Dataset is ready for dashboard visualization in Power BI.
 
-📂 File:
 
-High-Value Customers.csv
-
-✅ More analysis summaries will be added below as they are completed.
-
-🧠 Tools Used
-
-SQL (Data extraction from AdventureWorks)
-
-Python (pandas, seaborn, matplotlib) (Data wrangling & exploration)
-
-Power BI (Visualization & dashboarding)
-
-📝 Author
-
-Duaa Raed — Data Analyst | SQL | Python | Power BI
 
