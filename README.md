@@ -121,7 +121,7 @@ ORDER BY soh.TotalDue DESC;
 
 - Outliers were reviewed and retained because they represent significant transactions.
 
-*Outliers Detection*
+**Outliers Detection**
 
 - No outliers found in SalesOrderID.
 
