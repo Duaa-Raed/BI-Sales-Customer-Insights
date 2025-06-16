@@ -86,5 +86,62 @@ Noted the presence of high-spending customers (outliers) which may warrant furth
 
 The cleaned and segmented data is now ready for visualization and dashboard creation in Power BI.
 
+-----
+
+Classify requests by value
+----
+**Business Questions**
+
+- Are there any extreme or unusual values in the TotalDue column?
+
+- How many outliers exist in the dataset and what categories do they belong to?
+
+- Should these outliers be removed or retained for further analysis?
+
+**Data Source and Extraction**
+
+Extracted from AdventureWorks using a SQL query that joins customer and sales order data.
+
+```sql
+SELECT 
+    soh.SalesOrderID,
+    soh.TotalDue,
+    CASE 
+        WHEN soh.TotalDue >= 10000 THEN 'High'
+        WHEN soh.TotalDue >= 5000 THEN 'Medium'
+        ELSE 'Low'
+    END AS OrderCategory
+FROM Sales.SalesOrderHeader AS soh
+ORDER BY soh.TotalDue DESC;
+```
+
+**Data Cleaning**
+
+- Data types were verified and no missing values were found.
+
+- Outliers were reviewed and retained because they represent significant transactions.
+
+*Outliers Detection*
+
+No outliers found in SalesOrderID.
+
+2,127 outliers detected in TotalDue.
+
+These outliers represent unusually high or medium order amounts.
+
+**Summary and Next Steps**
+
+
+Confirmed presence of high-value and medium-value outliers in TotalDue.
+
+Decided to keep these outliers for comprehensive analysis to better understand customer spending behavior.
+
+Data is now prepared for further visualization and advanced analytics in Power BI.
+
+
+
+
+
+
 
 
