@@ -155,9 +155,9 @@ Monthly_sales_change_analysis
 
 **Data Source and Extraction**
 
-Extracted from the Sales.SalesOrderHeader table in the AdventureWorks database.
-Monthly totals were calculated using the order date and aggregated sales amount (TotalDue).
-Monthly growth was computed by comparing sales to the previous month.
+The data was extracted from the Sales.SalesOrderHeader and Sales.SalesOrderDetail tables in the AdventureWorks database.
+Monthly total sales were calculated by aggregating the product of order quantity and unit price, grouped by the order date formatted as year and month (yyyy-MM).
+A Common Table Expression (CTE) was used to first calculate monthly total sales. Then, the sales growth rate was computed by comparing each month’s total to the previous month using the LAG() window function.
 
 ```sql
 WITH MonthlySales AS (
@@ -197,6 +197,7 @@ Examples of growth outliers:
 - July 2011: +345.90%
 - October 2011: +814.38%
 - March 2014: +441.14%
+  
 These values were retained because they likely represent significant seasonal effects or business events, such as promotions or new product launches.
 
 **Summary and Next Steps**
