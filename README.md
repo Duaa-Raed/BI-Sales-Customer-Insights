@@ -140,6 +140,78 @@ Decided to keep these outliers for comprehensive analysis to better understand c
 
 Data is now prepared for further visualization and advanced analytics in Power BI.
 
+------
+
+Monthly_sales_change_analysis
+---
+**Business Questions**
+
+- How are monthly sales trending over time?
+
+- Are there months with unusually high or low sales growth?
+
+- What is the average monthly growth rate, and how volatile is it?
+
+
+**Data Source and Extraction**
+
+Extracted from the Sales.SalesOrderHeader table in the AdventureWorks database.
+Monthly totals were calculated using the order date and aggregated sales amount (TotalDue).
+Monthly growth was computed by comparing sales to the previous month.
+
+```sql
+WITH MonthlySales AS (
+    SELECT 
+        FORMAT(soh.OrderDate, 'yyyy-MM') AS SaleMonth,
+        SUM(sod.OrderQty * sod.UnitPrice) AS TotalSales
+    FROM Sales.SalesOrderHeader AS soh
+    JOIN Sales.SalesOrderDetail AS sod ON soh.SalesOrderID = sod.SalesOrderID
+    GROUP BY FORMAT(soh.OrderDate, 'yyyy-MM')
+)
+
+SELECT 
+    SaleMonth,
+    TotalSales,
+    LAG(TotalSales, 1) OVER (ORDER BY SaleMonth) AS PreviousMonthSales,
+    ROUND(
+        (CAST(TotalSales AS FLOAT) - LAG(TotalSales) OVER (ORDER BY SaleMonth)) 
+        / NULLIF(LAG(TotalSales) OVER (ORDER BY SaleMonth), 0) * 100, 2
+    ) AS GrowthRatePercent
+FROM MonthlySales
+ORDER BY SaleMonth;
+```
+
+**Data Cleaning**
+- Verified data types and ensured consistency in the SaleMonth format.
+
+- One missing value in PreviousMonthSales and GrowthRatePercent was expected (first month has no prior data).
+
+- No missing values in TotalSales.
+
+**Outlier Detection**
+- No outliers found in TotalSales or PreviousMonthSales.
+
+- Five outliers identified in the GrowthRatePercent column with unusually high growth rates (e.g., 814%, 441%, etc.).
+
+Examples of growth outliers:
+- July 2011: +345.90%
+- October 2011: +814.38%
+- March 2014: +441.14%
+These values were retained because they likely represent significant seasonal effects or business events, such as promotions or new product launches.
+
+**Summary and Next Steps**
+
+Monthly sales showed notable fluctuations with occasional spikes in growth.
+
+The presence of outliers highlights potential peak-performance months worth deeper business investigation.
+
+The cleaned and enriched dataset is now ready for Power BI visualization to uncover trends, seasonality, and actionable insights.
+
+
+
+
+
+
 
 
 
