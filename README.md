@@ -16,15 +16,15 @@ This project presents a comprehensive sales and customer performance analysis us
 
 The analysis covers various dimensions such as:
 
-Identifying high-value customers.
+- Identifying high-value customers.
 
-Understanding monthly sales trends and growth patterns.
+- Understanding monthly sales trends and growth patterns.
 
-Classifying sales orders by value.
+- Classifying sales orders by value.
 
-Ranking best-selling products by country.
+- Ranking best-selling products by country.
 
-The cleaned and enriched datasets support strategic decision-making and can be used in interactive dashboards for business insights.
+- The cleaned and enriched datasets support strategic decision-making and can be used in interactive dashboards for business insights.
 
 ---
 
