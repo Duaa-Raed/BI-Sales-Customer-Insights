@@ -90,7 +90,7 @@ The cleaned and segmented data is now ready for visualization and dashboard crea
 
 Classify requests by value
 ----
-**Business Questions**
+**Data Quality Assessment**
 
 - Are there any extreme or unusual values in the TotalDue column?
 
