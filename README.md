@@ -5,7 +5,6 @@ Sales Performance Analysis Dashboard
 **Table of Contents**
 
 - [Project Description](#project-description)
-- [Extracted Datasets](#extracted-datasets)
 - [High-Value Customers Analysis](#high-value-customers-analysis)
 - [Classify Requests by Value](#classify-requests-by-value)
 - [Monthly Sales Change Analysis](#monthly-sales-change-analysis)
