@@ -2,29 +2,34 @@
 Sales Performance Analysis Dashboard
 -----
 
----
-**Project Overview**
+**Table of Contents**
 
-This project aims to analyze and visualize key sales and customer performance indicators extracted from the AdventureWorks database using SQL and Python. The data was prepared for advanced business intelligence visualization using Power BI.
-
-All datasets were retrieved directly from the AdventureWorks relational database and exported as CSV files for data cleaning, feature engineering, and analysis.
-
-The project includes multiple analytical modules, each designed to answer specific business questions using cleaned and enriched data.
-
----
-**Extracted Datasets**
-
-High-Value Customers.csv
-
-Monthly Sales Change Analysis.csv
-
-Classify Requests by Value.csv
-
-Top 5 Best-Selling Products in Each Country.csv
-
+- [Project Description](#project-description)
+- [Extracted Datasets](#extracted-datasets)
+- [High-Value Customers Analysis](#high-value-customers-analysis)
+- [Classify Requests by Value](#classify-requests-by-value)
+- [Monthly Sales Change Analysis](#monthly-sales-change-analysis)
+- [Best-Selling Product Rankings by Country](#best-selling-product-rankings-by-country)
 -------
+## Project Description
 
-High-Value Customers Analysis
+This project presents a comprehensive sales and customer performance analysis using data extracted from the AdventureWorks relational database. The objective is to answer key business questions using SQL for data extraction, Python for cleaning and analysis, and Power BI for visualization.
+
+The analysis covers various dimensions such as:
+
+Identifying high-value customers.
+
+Understanding monthly sales trends and growth patterns.
+
+Classifying sales orders by value.
+
+Ranking best-selling products by country.
+
+The cleaned and enriched datasets support strategic decision-making and can be used in interactive dashboards for business insights.
+
+---
+
+## High-Value Customers Analysis
 ----
 **Business Questions**
 
@@ -88,7 +93,7 @@ The cleaned and segmented data is now ready for visualization and dashboard crea
 
 -----
 
-Classify requests by value
+## Classify requests by value
 ----
 **Data Quality Assessment**
 
@@ -142,7 +147,7 @@ Data is now prepared for further visualization and advanced analytics in Power B
 
 ------
 
-Monthly_sales_change_analysis
+## Monthly_sales_change_analysis
 ---
 **Business Questions**
 
@@ -210,7 +215,7 @@ The cleaned and enriched dataset is now ready for Power BI visualization to unco
 
 -----
 
-Best-Selling Product Rankings by Country
+## Best-Selling Product Rankings by Country
 ---
 
 **Business Questions**
