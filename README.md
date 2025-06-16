@@ -24,7 +24,7 @@ Top 5 Best-Selling Products in Each Country.csv
 
 -------
 
-High-Value Customers Analysis
+##High-Value Customers Analysis
 ----
 **Business Questions**
 
@@ -34,7 +34,7 @@ High-Value Customers Analysis
 
 - How can we categorize customers based on their spending?
 
-**Summary**
+**Data Source and Extraction**
 
 Extracted from AdventureWorks using a SQL query that joins customer and sales order data.
 
@@ -54,17 +54,34 @@ HAVING SUM(sod.OrderQty * sod.UnitPrice) > 10000
 ORDER BY TotalSpent DESC;
 ```
 
-Cleaned using pandas: verified datatypes, checked for nulls, and preserved all valid outliers.
+**Data Cleaning**
+Verified data types and ensured there are no missing values.
 
-Applied segmentation logic:
+Outliers were examined and retained, as they represent significant high-value customers.
 
-High Roller (> 450,000 in spending)
+**Customer Segmentation**
+*Based on total spending, customers were segmented as follows:*
 
-Loyal Customer (> 150,000)
+High Roller: Customers spending more than 450,000
 
-Regular Customer (others)
+Loyal Customer: Customers spending between 150,000 and 450,000
 
-Dataset is ready for dashboard visualization in Power BI.
+Regular Customer: Customers spending less than or equal to 150,000
+
+*The distribution of customers across segments is:*
+
+Regular Customer: 297
+
+Loyal Customer: 143
+
+High Roller: 38
+
+**Summary and Next Steps**
+Identified the most valuable customers and categorized them into clear spending segments.
+
+Noted the presence of high-spending customers (outliers) which may warrant further behavioral analysis.
+
+The cleaned and segmented data is now ready for visualization and dashboard creation in Power BI.
 
 
 
