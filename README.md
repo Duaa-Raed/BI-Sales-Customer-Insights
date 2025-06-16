@@ -123,9 +123,9 @@ ORDER BY soh.TotalDue DESC;
 
 *Outliers Detection*
 
-No outliers found in SalesOrderID.
+- No outliers found in SalesOrderID.
 
-2,127 outliers detected in TotalDue.
+- 2,127 outliers detected in TotalDue.
 
 These outliers represent unusually high or medium order amounts.
 
