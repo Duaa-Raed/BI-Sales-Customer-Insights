@@ -208,6 +208,86 @@ The presence of outliers highlights potential peak-performance months worth deep
 
 The cleaned and enriched dataset is now ready for Power BI visualization to uncover trends, seasonality, and actionable insights.
 
+-----
+
+Best-Selling Product Rankings by Country
+---
+
+**Business Questions**
+- Are there any unusually high sales quantities in the dataset?
+
+- Which products and countries do these high sales values belong to?
+
+- Should these outliers be considered normal or treated in the analysis?
+
+****Data Source and Extraction****
+
+The data was extracted from the AdventureWorks database to find the top 5 best-selling products in each country.
+
+We joined order, product, and location tables to:
+
+Calculate total quantity sold per product in each country.
+
+Rank products using DENSE_RANK() by quantity sold.
+
+Filter to keep only the top 5 products per country.
+
+
+```sql
+WITH ProductSales AS (
+    SELECT 
+        cr.Name AS Country,
+        p.Name AS ProductName,
+        SUM(sod.OrderQty) AS TotalQuantity
+    FROM Sales.SalesOrderHeader AS soh
+    JOIN Sales.SalesOrderDetail AS sod ON soh.SalesOrderID = sod.SalesOrderID
+    JOIN Production.Product AS p ON sod.ProductID = p.ProductID
+    LEFT JOIN Person.Address AS addr ON soh.BillToAddressID = addr.AddressID
+    LEFT JOIN Person.StateProvince AS sp ON addr.StateProvinceID = sp.StateProvinceID
+    LEFT JOIN Person.CountryRegion AS cr ON sp.CountryRegionCode = cr.CountryRegionCode
+    GROUP BY cr.Name, p.Name
+),
+RankedProducts AS (
+    SELECT 
+        Country,
+        ProductName,
+        TotalQuantity,
+        DENSE_RANK() OVER (PARTITION BY Country ORDER BY TotalQuantity DESC) AS ProductRank
+    FROM ProductSales
+)
+SELECT *
+FROM RankedProducts
+WHERE ProductRank <= 5
+ORDER BY Country, ProductRank;
+```
+
+
+**Outlier Detection**
+
+- No outliers detected in the ProductRank column.
+
+- Five outliers detected in the TotalQuantity column, all related to products sold in the United States with exceptionally high sales volumes (over 3000 units).
+
+- These outliers correspond to the top 5 ranked products, highlighting their strong sales performance in the U.S. market.
+
+**Interpretation**
+These high sales volumes likely reflect genuine market trends such as:
+
+- Popular product demand
+
+- Larger market size in the U.S.
+
+- Possible promotional campaigns or seasonal effects
+
+- Therefore, these outliers should not be removed and instead can provide valuable insights into market dynamics.
+
+**Summary and Next Steps**
+
+The dataset is clean and reliable, with clear outliers in sales quantity that represent real business phenomena.
+
+Further analysis can explore factors driving these high sales and support strategic decision-making.
+
+The data is ready for advanced visualization and reporting in Power BI to uncover deeper patterns by country and product.
 
 
 
