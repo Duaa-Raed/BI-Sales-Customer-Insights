@@ -127,7 +127,9 @@ ORDER BY soh.TotalDue DESC;
 
 - 2,127 outliers detected in TotalDue.
 
-These outliers represent unusually high or medium order amounts.
+*Reason for Retaining Outliers*
+
+The identified outliers in the TotalDue column represent significant transactions that are important from a business perspective. These high-value orders are not errors or data anomalies but rather reflect real customer behaviors, such as large or bulk purchases. Removing them could lead to loss of valuable insights about key customer segments and spending patterns. Therefore, they are retained to ensure a comprehensive and accurate analysis of sales performance.*
 
 **Summary and Next Steps**
 
