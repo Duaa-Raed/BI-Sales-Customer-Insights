@@ -55,11 +55,13 @@ ORDER BY TotalSpent DESC;
 ```
 
 **Data Cleaning**
+
 Verified data types and ensured there are no missing values.
 
 Outliers were examined and retained, as they represent significant high-value customers.
 
 **Customer Segmentation**
+
 *Based on total spending, customers were segmented as follows:*
 
 High Roller: Customers spending more than 450,000
