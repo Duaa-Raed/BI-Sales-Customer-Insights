@@ -24,9 +24,9 @@ Top 5 Best-Selling Products in Each Country.csv
 
 -------
 
-*1. High-Value Customers Analysis*
+** High-Value Customers Analysis*
 ----
-🎯 Business Questions:
+*Business Questions*
 
 Who are the most valuable customers in terms of total spending?
 
@@ -34,9 +34,25 @@ Are there any unusual high spenders or inconsistent order behavior?
 
 How can we categorize customers based on their spending?
 
-✅ Summary:
+*Summary*
 
 Extracted from AdventureWorks using a SQL query that joins customer and sales order data.
+
+```sql
+SELECT 
+    c.CustomerID,
+    ISNULL(per.FirstName + ' ' + per.LastName, 'Store Account') AS CustomerName,
+    SUM(sod.OrderQty * sod.UnitPrice) AS TotalSpent,
+    COUNT(DISTINCT soh.SalesOrderID) AS OrdersCount,
+    AVG(sod.OrderQty * sod.UnitPrice) AS AvgOrderValue
+FROM Sales.SalesOrderHeader AS soh
+JOIN Sales.SalesOrderDetail AS sod ON soh.SalesOrderID = sod.SalesOrderID
+LEFT JOIN Sales.Customer AS c ON soh.CustomerID = c.CustomerID
+LEFT JOIN Person.Person AS per ON c.PersonID = per.BusinessEntityID
+GROUP BY c.CustomerID, per.FirstName, per.LastName
+HAVING SUM(sod.OrderQty * sod.UnitPrice) > 10000
+ORDER BY TotalSpent DESC;
+```
 
 Cleaned using pandas: verified datatypes, checked for nulls, and preserved all valid outliers.
 
