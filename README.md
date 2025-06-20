@@ -2,6 +2,7 @@
 Sales Performance Analysis Dashboard
 -----
 ------
+
 **Table of Contents**
 
 - [Project Description](#project-description)
@@ -9,8 +10,10 @@ Sales Performance Analysis Dashboard
 - [Classify Requests by Value](#classify-requests-by-value)
 - [Monthly Sales Change Analysis](#monthly-sales-change-analysis)
 - [Best-Selling Product Rankings by Country](#best-selling-product-rankings-by-country)
--------
+
+
 ## Project Description
+-----
 
 This project presents a comprehensive sales and customer performance analysis using data extracted from the AdventureWorks relational database. The objective is to answer key business questions using SQL for data extraction, Python for cleaning and analysis, and Power BI for visualization.
 
