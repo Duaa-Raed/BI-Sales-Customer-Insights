@@ -1,7 +1,7 @@
 ------
 Sales Performance Analysis Dashboard
 -----
-
+------
 **Table of Contents**
 
 - [Project Description](#project-description)
@@ -26,10 +26,12 @@ The analysis covers various dimensions such as:
 
 - The cleaned and enriched datasets support strategic decision-making and can be used in interactive dashboards for business insights.
 
----
+
+
 
 ## High-Value Customers Analysis
 ----
+
 **Business Questions**
 
 - Who are the most valuable customers in terms of total spending?
@@ -90,10 +92,11 @@ Noted the presence of high-spending customers (outliers) which may warrant furth
 
 The cleaned and segmented data is now ready for visualization and dashboard creation in Power BI.
 
------
+
 
 ## Classify requests by value
 ----
+
 **Data Quality Assessment**
 
 - Are there any extreme or unusual values in the TotalDue column?
@@ -144,10 +147,11 @@ Decided to keep these outliers for comprehensive analysis to better understand c
 
 Data is now prepared for further visualization and advanced analytics in Power BI.
 
-------
+
 
 ## Monthly_sales_change_analysis
 ---
+
 **Business Questions**
 
 - How are monthly sales trending over time?
@@ -212,7 +216,7 @@ The presence of outliers highlights potential peak-performance months worth deep
 
 The cleaned and enriched dataset is now ready for Power BI visualization to uncover trends, seasonality, and actionable insights.
 
------
+
 
 ## Best-Selling Product Rankings by Country
 ---
