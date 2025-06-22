@@ -4,7 +4,6 @@ import seaborn as sns
 
 
 
-classify_requests_by_value=pd.read_csv('C:/Users/duaar/OneDrive/Desktop/SalesPerformance/Classify requests by value.csv')
 
 classify_requests_by_value.info()
 print(classify_requests_by_value.isnull().sum())
@@ -44,7 +43,7 @@ plt.show()
 import os
 
 # Define the target path
-target_path = r'C:\Users\duaar\OneDrive\Desktop\analysis.py'
+target_path = 'analysis.py'
 
 # Get the current file's content
 current_file = __file__
