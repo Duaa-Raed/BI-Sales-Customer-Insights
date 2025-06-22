@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-monthly_sales_change_analysis=pd.read_csv('C:/Users/duaar/OneDrive/Desktop/SalesPerformance/Monthly sales change analysis.csv')
+monthly_sales_change_analysis=pd.read_csv('Monthly sales change analysis.csv')
 
 monthly_sales_change_analysis.info()
 print(monthly_sales_change_analysis.isnull().sum())
