@@ -4,6 +4,7 @@ import seaborn as sns
 
 
 
+classify_requests_by_value=pd.read_csv(classify_requests_by_value.csv')
 
 classify_requests_by_value.info()
 print(classify_requests_by_value.isnull().sum())
