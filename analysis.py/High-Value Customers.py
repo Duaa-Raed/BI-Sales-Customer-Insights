@@ -3,7 +3,7 @@ import matplotlib.pyplot as  plt
 import seaborn as sns
 
 
-high_Value_Customers=pd.read_csv('C:/Users/duaar/OneDrive/Desktop/SalesPerformance/High-Value Customers.csv')
+high_Value_Customers=pd.read_csv('High-Value Customers.csv')
 
 high_Value_Customers.info()
 print(high_Value_Customers.isnull().sum())
@@ -53,7 +53,7 @@ print(segment_counts)
 import os
 
 # Define the target path
-target_path = r'C:\Users\duaar\OneDrive\Desktop\analysis.py'
+target_path = r'analysis.py'
 
 # Get the current file's content
 current_file = __file__
