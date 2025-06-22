@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-best_selling_products=pd.read_csv('C:/Users/duaar/OneDrive/Desktop/SalesPerformance/Top 5 best-selling products in each country.csv')
+best_selling_products=pd.read_csv('Top 5 best-selling products in each country.csv')
 
 best_selling_products.info()
 print(best_selling_products.isnull().sum())
