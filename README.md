@@ -71,7 +71,7 @@ Outliers were examined and retained, as they represent significant high-value cu
 
 **Customer Segmentation**
 
-*Based on total spending, customers were segmented as follows:*
+- *Based on total spending, customers were segmented as follows:*
 
 - High Roller: Customers spending more than 450,000
 
@@ -79,7 +79,7 @@ Outliers were examined and retained, as they represent significant high-value cu
 
 - Regular Customer: Customers spending less than or equal to 150,000
 
-*The distribution of customers across segments is:*
+- *The distribution of customers across segments is:*
 
 - Regular Customer: 297
 
