@@ -17,7 +17,7 @@ Sales Performance Analysis Dashboard
 
 This project presents a comprehensive sales and customer performance analysis using data extracted from the AdventureWorks relational database. The objective is to answer key business questions using SQL for data extraction, Python for cleaning and analysis, and Power BI for visualization.
 
-The analysis covers various dimensions such as:
+The analysis covers various dimensions such as :
 
 - Identifying high-value customers.
 
